@@ -1,0 +1,29 @@
+---
+import { Image } from "astro:assets";
+import fotoVectores from "../../assets/Foto-vector.webp";
+---
+
+<div class="absolute -inset-10 bg-white/5 rounded-full blur-2xl"></div>
+
+<Image
+    src={fotoVectores}
+    alt="Miguel Figueroa"
+    width={800}
+    height={800}
+    quality={90}
+    format="webp"
+    class="mask-gradient relative w-[300px] md:w-[450px] h-auto"
+/>
+
+<style>
+    .mask-gradient {
+        mask-image: linear-gradient(to bottom, black 95%, transparent 100%);
+        -webkit-mask-image: linear-gradient(
+            to bottom,
+            black 95%,
+            transparent 100%
+        );
+        mask-repeat: no-repeat;
+        -webkit-mask-repeat: no-repeat;
+    }
+</style>

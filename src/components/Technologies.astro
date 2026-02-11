@@ -1,0 +1,25 @@
+---
+import { Icon } from "astro-icon/components";
+
+const { name, icon, color } = Astro.props;
+---
+
+<div class="group flex flex-col items-center gap-4">
+    <div
+        class={[
+            "relative flex items-center justify-center",
+            "w-24 h-24 rounded-3xl",
+            "bg-[#0a0a0a] border border-white/10",
+            "transition-all duration-300",
+            "hover:-translate-y-2 hover:border-white/30",
+            "hover:shadow-[0_0_40px_-10px]",
+            color,
+        ].join(" ")}
+    >
+        <Icon name={icon} class="w-10 h-10 text-white" aria-hidden="true" />
+    </div>
+
+    <p class="text-[10px] text-slate-500 uppercase font-bold tracking-wide">
+        {name}
+    </p>
+</div>

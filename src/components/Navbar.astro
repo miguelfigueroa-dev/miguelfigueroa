@@ -1,0 +1,29 @@
+---
+import { Image } from "astro:assets";
+import LogoM from "../assets/LogoM-BN.webp";
+---
+
+<nav
+    aria-label="Navegación principal"
+    class="hidden md:block fixed top-0 w-full z-50 py-8 backdrop-blur-md bg-black/40 [mask-image:linear-gradient(to_bottom,black_80%,transparent_100%)]"
+>
+    <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+        <div class="w-12 h-12">
+            <Image src={LogoM} alt="Logotipo" class="w-full h-full" />
+        </div>
+
+        <div
+            class="flex space-x-10 text-xs font-bold tracking-[0.2em] text-slate-400"
+        >
+            <a href="#sobre-mi" class="hover:text-white transition-colors"
+                >SOBRE MI</a
+            >
+            <a href="#proyectos" class="hover:text-white transition-colors"
+                >PROYECTOS</a
+            >
+            <a href="#tecnologias" class="hover:text-white transition-colors"
+                >TECNOLOGIAS</a
+            >
+        </div>
+    </div>
+</nav>

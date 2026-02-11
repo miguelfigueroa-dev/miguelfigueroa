@@ -1,0 +1,22 @@
+---
+interface Props {
+    tipo: string;
+    title: string;
+    institution: string;
+    year: string | number;
+}
+
+const { tipo, title, institution, year } = Astro.props as Props;
+---
+
+<div
+    class="p-5 bg-[#101010] border border-white/10 rounded-[1.5rem] flex items-center transition-colors hover:border-white/20"
+>
+    <div>
+        <p class="text-white text-sm">{tipo}</p>
+        <h3 class="text-white font-semibold">{title}</h3>
+        <p class="text-slate-500 text-sm mt-1">
+            {institution} • {year}
+        </p>
+    </div>
+</div>

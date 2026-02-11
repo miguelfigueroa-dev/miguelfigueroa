@@ -1,0 +1,41 @@
+---
+import Email from "./UI/Email.astro";
+import ImageHero from "./UI/ImageHero.astro";
+---
+
+<section
+    class="min-h-screen flex flex-col md:flex-row items-center justify-center gap-12 md:gap-16 pt-20 px-4"
+>
+    <div class="relative order-first md:order-last flex justify-center">
+        <ImageHero />
+    </div>
+
+    <div class="flex-1 space-y-8 text-center md:text-left">
+        <div
+            class="inline-flex items-center gap-3 border-l-2 border-white/20 pl-4 py-1"
+        >
+            <span
+                class="text-[12px] uppercase tracking-widest text-white/60 font-medium"
+            >
+                Disponible para nuevos retos
+            </span>
+        </div>
+
+        <h1
+            class="text-5xl md:text-7xl font-bold tracking-tighter leading-none"
+        >
+            Hola, soy <br />
+            <span class="text-white">Miguel Figueroa</span>
+        </h1>
+
+        <p
+            class="text-xl text-slate-400 max-w-xl mx-auto md:mx-0 leading-relaxed"
+        >
+            Entender el problema. Diseñar la solución. Construir con intención.
+        </p>
+
+        <div class="flex justify-center md:justify-start">
+            <Email />
+        </div>
+    </div>
+</section>

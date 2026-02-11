@@ -1,0 +1,102 @@
+---
+import ProjectCard from "./UI/ProjectCard.astro";
+import TranspoteImg from "../assets/Transporte.webp";
+import EF from "../assets/EF.webp";
+import Cuestionario from "../assets/Cuestionario.webp";
+
+const projects = [
+  {
+    title: "Ecosistema de Transporte (Uber Style)",
+    description: [
+      "Desarrollo de una solución integral de transporte para una cooperativa en La Libertad, El Salvador, con el objetivo de digitalizar la logística de viajes y conectar de forma segura a conductores y pasajeros en tiempo real.",
+    ],
+    details: [
+      "Se diseñó y desplegó un ecosistema de software robusto compuesto por tres plataformas interconectadas: una aplicación móvil para pasajeros, una para conductores y un panel administrativo web.",
+      "El sistema gestiona el ciclo completo de movilidad urbana, desde la solicitud del viaje de un punto A a un punto B, hasta el cobro y la asignación de fondos a los conductores.",
+      "Para garantizar la confianza en el servicio, se implementaron medidas de seguridad estrictas, como la validación obligatoria a través de códigos de verificación (OTP) vía SMS cada vez que se inicia un viaje.",
+      "Todo el sistema funciona con una base de datos en tiempo real que permite que tanto el pasajero como el conductor vean los cambios de estado del viaje al instante, ofreciendo un control total y transparente para la administración.",
+    ],
+    myRole: [
+      "Formé parte del equipo de desarrollo compuesto por cuatro programadores, donde desempeñé un rol integral desde la configuración inicial del entorno para Android hasta la implementación de lógica en el frontend y backend.",
+      "Colaboré activamente en la maquetación de interfaces de usuario, garantizando que fueran funcionales y fieles al diseño original.",
+      "Responsable del desarrollo de la lógica CRUD y la integración de datos con Firebase Realtime Database para los módulos asignados.",
+      "Contribuí a la implementación del sistema de internacionalización (i18n) para soporte bilingüe (Español/Inglés) y en el desarrollo de un sistema de alertas de conectividad para optimizar la experiencia en zonas con baja señal.",
+      "Participé en la integración de la API de Twilio para la validación de seguridad mediante códigos OTP.",
+      "Mi alcance también incluyó la gestión de dependencias, resolución de incidencias y la optimización del rendimiento general tanto en las aplicaciones móviles como en el panel administrativo.",
+    ],
+    technologies: ["Ionic", "Angular", "Firebase", "Twilio", "Maps API"],
+    image: TranspoteImg,
+  },
+  {
+    title: "Sistema Integral de evaluacións dinámicas",
+    description: [
+      "Desarrollo Fullstack de una plataforma de tests con API REST en PHP y panel administrativo en Angular. Implementación de lógica CRUD, protección de rutas mediante Guards e integración avanzada de SurveyJS.",
+    ],
+    details: [
+      "El sistema consiste en una solución integral diseñada para la gestión y ejecución de evaluaciones digitales, estructurada bajo una arquitectura desacoplada que separa el backend del frontend.",
+      "El núcleo del sistema es una API REST desarrollada en PHP y conectada a una base de datos MySQL para la gestión total de los datos (CRUD).",
+      "El panel administrativo fue construido en Angular, integrando un sistema de autenticación y Guards para asegurar que solo el personal autorizado gestione las evaluaciones.",
+      "La plataforma destaca por su alta capacidad de personalización y experiencia de usuario, integrando la biblioteca SurveyJS para la generación dinámica de formularios.",
+      "El sistema utiliza LocalStorage para guardar las respuestas de los usuarios durante los tests, asegurando que la información no se pierda durante el proceso. Finalmente, la solución fue desplegada en su respectivo servidor para su uso.",
+    ],
+    myRole: [
+      "Formé parte de un equipo de desarrollo junto a otros dos programadores, colaborando en la integración general del sistema para asegurar que todas las partes conectaran correctamente.",
+      "Colaboré en el desarrollo de la API REST con PHP, ayudando a crear los endpoints que me asignaron para que el servidor y las aplicaciones frontend pudieran intercambiar información sin problemas.",
+      "Apoyé en el desarrollo del panel administrativo con Angular, ayudando a configurar el sistema de rutas y los guardianes de seguridad (Guards) para controlar quién podía entrar a ciertas partes del sistema.",
+      "Me encargué de crear la lógica de las operaciones CRUD que me asignaron y también trabajé en la integración de SurveyJS para que los formularios fueran dinámicos. Además, usé LocalStorage para asegurar que las respuestas de los usuarios se guardaran correctamente durante el proceso.",
+      "Colaboré en la maquetación y diseño responsivo utilizando Bootstrap y CSS, asegurando una experiencia de usuario funcional tanto en el panel de administración como en el formulario de tests.",
+    ],
+    technologies: [
+      "Angular",
+      "JavaScript",
+      "PHP",
+      "HTML",
+      "CSS",
+      "Bootstrap",
+      "SurveyJS",
+    ],
+    image: Cuestionario,
+  },
+  {
+    title: "English Fufi",
+    description: [
+      "Proyecto personal desarrollado para practicar y reforzar habilidades de programación, consistente en una plataforma educativa para la enseñanza del inglés (USA). El sistema integrará lecciones dinámicas y una interfaz amigable protagonizada por un pingüino llamado Fufi, quien guía el proceso de aprendizaje.",
+    ],
+    details: [
+      "Funcionalidades previstas:",
+      "Módulos de Aprendizaje: El menú principal permitirá acceder a lecciones organizadas por niveles, donde se integrarán ejercicios dinámicos de gramática y vocabulario técnico.",
+      "Panel de Progreso Personal: Incluirá una sección para que el usuario pueda visualizar su avance, lecciones completadas y los puntos obtenidos durante su aprendizaje.",
+      "Guía Interactiva con Fufi: Una opción dedicada para interactuar con el personaje principal, quien ofrecerá consejos útiles, repasos rápidos y motivación para continuar con las lecciones.",
+      "Biblioteca de Recursos: El sistema contará con un apartado de consulta rápida para revisar reglas gramaticales y vocabulario específico del inglés estadounidense tratado en el curso.",
+    ],
+    myRole: [
+      "Gestión de infraestructura: Compré y configuré el dominio englishfufi.com en Cloudflare, aprovechando su robusta capa de seguridad y estabilidad para proteger el acceso al proyecto.",
+      "Centralización y rendimiento: Unifiqué el hosting y el dominio en un solo ecosistema, lo que me permite gestionar todo el proyecto de forma eficiente y asegurar un alto rendimiento sin costos operativos.",
+      "Automatización de despliegue: Implementé un flujo de trabajo conectando Cloudflare Pages con mi repositorio de GitHub, de modo que cada vez que subo un cambio a la rama main, este se refleja automáticamente en la web en cuestión de segundos.",
+      "Arquitectura en Angular: Estoy desarrollando la estructura base con Angular, aplicando una organización de componentes escalable que facilite la futura integración de lecciones y ejercicios.",
+      "Identidad y Diseño Visual: Creé personalmente la imagen de Fufi y diseñé una interfaz intuitiva, enfocándome en que la estética sea amigable y motive al usuario durante su aprendizaje.",
+    ],
+    technologies: [
+      "Angular",
+      "TypeScript",
+      "Firebase",
+      "Cloudflare Pages",
+      "Tailwind",
+      "HTML",
+      "CSS",
+      "GitHub",
+    ],
+    image: EF,
+  },
+];
+---
+
+<section id="proyectos" class="py-32">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-4xl font-bold text-white mb-12">Proyectos destacados</h2>
+
+    <div class="flex flex-col gap-10">
+      {projects.map((project) => <ProjectCard {...project} />)}
+    </div>
+  </div>
+</section>

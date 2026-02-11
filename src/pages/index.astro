@@ -1,11 +1,115 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import MainLayout from "../layouts/MainLayout.astro";
+import Navbar from "../components/Navbar.astro";
+import Hero from "../components/Hero.astro";
+import About from "../components/About.astro";
+import Projects from "../components/Projects.astro";
+import Technologies from "../components/Technologies.astro";
+import Footer from "../components/Footer.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+interface Skill {
+	name: string;
+	icon: string;
+	color: string;
+}
+
+const SKILLS: Skill[] = [
+	{
+		name: "Angular",
+		icon: "simple-icons:angular",
+		color: "hover:shadow-red-600/40",
+	},
+	{
+		name: "Ionic",
+		icon: "simple-icons:ionic",
+		color: "hover:shadow-blue-500/40",
+	},
+	{
+		name: "Astro",
+		icon: "simple-icons:astro",
+		color: "hover:shadow-orange-600/40",
+	},
+	{
+		name: "React",
+		icon: "simple-icons:react",
+		color: "hover:shadow-cyan-400/40",
+	},
+	{
+		name: "Next.js",
+		icon: "simple-icons:nextdotjs",
+		color: "hover:shadow-white/40",
+	},
+	{
+		name: "Node.js",
+		icon: "simple-icons:nodedotjs",
+		color: "hover:shadow-green-500/40",
+	},
+	{
+		name: "JavaScript",
+		icon: "simple-icons:javascript",
+		color: "hover:shadow-yellow-500/40",
+	},
+	{
+		name: "TypeScript",
+		icon: "simple-icons:typescript",
+		color: "hover:shadow-blue-600/40",
+	},
+	{
+		name: "PHP",
+		icon: "simple-icons:php",
+		color: "hover:shadow-indigo-400/40",
+	},
+	{
+		name: "Firebase",
+		icon: "simple-icons:firebase",
+		color: "hover:shadow-orange-500/40",
+	},
+	{
+		name: "MySQL",
+		icon: "simple-icons:mysql",
+		color: "hover:shadow-blue-500/40",
+	},
+	{
+		name: "Cloudflare",
+		icon: "simple-icons:cloudflare",
+		color: "hover:shadow-orange-400/40",
+	},
+	{
+		name: "Tailwind",
+		icon: "simple-icons:tailwindcss",
+		color: "hover:shadow-cyan-500/40",
+	},
+	{
+		name: "Bootstrap",
+		icon: "simple-icons:bootstrap",
+		color: "hover:shadow-purple-500/40",
+	},
+	{
+		name: "GitHub",
+		icon: "simple-icons:github",
+		color: "hover:shadow-slate-400/40",
+	},
+];
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<MainLayout title="Miguel Figueroa | Portfolio">
+	<Navbar />
+
+	<main class="max-w-6xl mx-auto px-6">
+		<Hero />
+		<About />
+		<Projects />
+
+		<section id="tecnologias" class="py-32 border-t border-white/5">
+			<h2 class="text-3xl font-bold mb-12 tracking-tighter text-white">
+				Stack tecnológico
+			</h2>
+
+			<div class="grid grid-cols-2 md:grid-cols-5 gap-8">
+				{SKILLS.map((skill) => <Technologies {...skill} />)}
+			</div>
+		</section>
+	</main>
+
+	<Footer />
+</MainLayout>

@@ -1,0 +1,75 @@
+---
+import CertificationCard from "./UI/CertificationCard.astro";
+
+const CERTIFICATIONS = [
+    {
+        tipo: "EDUCACION SUPERIOR",
+        title: "TECNICO EN INGENIERIA DE SISTEMAS INFORMATICOS",
+        institution: "ITCA-FEPADE",
+        year: "2021",
+    },
+    {
+        tipo: "Certificado",
+        title: "JavaScript Essentials y Fundamentos de Python 1 y 2",
+        institution: "Academia CISCO / ESIT",
+        year: "2023",
+    },
+    {
+        tipo: "Certificado",
+        title: "QA Testing: Metodologías para la Gestión de pruebas de calidad de software",
+        institution: "ESIT",
+        year: "2023",
+    },
+];
+---
+
+<section id="sobre-mi" class="py-32 border-t border-white/5">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+        <h2 class="text-3xl font-bold tracking-tighter text-white">Sobre mí</h2>
+        <h3
+            class="text-3xl font-bold tracking-tighter text-white hidden md:block"
+        >
+            Educación superior y Certificaciones
+        </h3>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+        <div class="space-y-6 text-slate-400 leading-relaxed text-lg">
+            <p>
+                Soy desarrollador Frontend enfocado en la creación de
+                aplicaciones web y móviles funcionales, escalables y orientadas
+                al usuario. Disfruto transformar requerimientos en interfaces
+                claras y bien estructuradas, manteniendo siempre un equilibrio
+                entre diseño, rendimiento y mantenibilidad del código.
+            </p>
+            <p>
+                Cuento con experiencia trabajando con frameworks modernos como
+                Angular, Astro, React, integrando servicios externos, consumo de
+                APIs y manejo de datos en tiempo real. Me siento cómodo
+                colaborando en equipos de desarrollo, participando tanto en la
+                construcción de interfaces como en la implementación de lógica
+                de negocio, cuidando la calidad del producto y la experiencia
+                final del usuario.
+            </p>
+            <p>
+                Además, mantengo una mentalidad de aprendizaje continuo a través
+                de proyectos personales y trabajo colaborativo, donde aplico
+                buenas prácticas, optimización y automatización de procesos.
+                Busco formar parte de equipos donde pueda aportar y seguir
+                creciendo profesionalmente en el desarrollo de productos.
+            </p>
+        </div>
+
+        <div class="space-y-6">
+            <h3
+                class="text-3xl font-bold tracking-tighter text-white md:hidden mb-8"
+            >
+                Educación y Certificaciones
+            </h3>
+
+            <div class="grid grid-cols-1 gap-4">
+                {CERTIFICATIONS.map((cert) => <CertificationCard {...cert} />)}
+            </div>
+        </div>
+    </div>
+</section>

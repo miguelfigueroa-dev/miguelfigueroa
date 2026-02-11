@@ -1,0 +1,47 @@
+---
+import { Icon } from "astro-icon/components";
+const currentYear = new Date().getFullYear();
+---
+
+<footer
+    class="w-full py-8 border-t border-white/10 bg-black/20 backdrop-blur-sm"
+>
+    <div
+        class="max-w-6xl mx-auto px-4 flex flex-col items-center gap-4 text-center"
+    >
+        <p class="text-slate-400 text-sm md:text-base font-light">
+            © {currentYear}
+            <span class="text-white font-medium"> Miguel Figueroa</span>. Creado
+            con
+            <a
+                href="https://astro.build"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="hover:text-purple-500 transition-colors">Astro</a
+            >
+            y alojado en
+            <a
+                href="https://pages.cloudflare.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="hover:text-orange-400 transition-colors"
+                >Cloudflare Pages</a
+            >.
+        </p>
+
+        <a
+            href="https://github.com/miguelfigueroa-dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-3 px-6 py-2 rounded-full bg-white/5 border border-white/10 text-slate-400 hover:text-white hover:bg-white/10 hover:border-white/20 transition-colors shadow-xl group"
+        >
+            <Icon
+                name="simple-icons:github"
+                class="w-4 h-4 opacity-60 group-hover:opacity-100 transition-opacity"
+            />
+            <span class="text-[10px] uppercase tracking-[0.3em] font-bold">
+                Ver código fuente
+            </span>
+        </a>
+    </div>
+</footer>
